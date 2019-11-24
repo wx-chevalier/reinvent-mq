@@ -10,8 +10,8 @@ import (
 	"time"
 
 	dynaport "github.com/travisjeffery/go-dynaport"
-	"wx.pongo/pongo/config"
 	"wx.pongo/log"
+	"wx.pongo/pongo/config"
 )
 
 func TestConfig(t *testing.T) (string, *config.Config) {
