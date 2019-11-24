@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/travisjeffery/jocko/commitlog"
+	"wx.pongo/commitlog"
 )
 
 func TestSegmentScanner(t *testing.T) {

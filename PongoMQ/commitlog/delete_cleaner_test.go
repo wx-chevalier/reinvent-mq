@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/travisjeffery/jocko/commitlog"
-	"github.com/travisjeffery/jocko/protocol"
+	"wx.pongo/commitlog"
+	"wx.pongo/protocol"
 )
 
 func TestDeleteCleaner(t *testing.T) {
@@ -17,7 +17,7 @@ func TestDeleteCleaner(t *testing.T) {
 
 	var msgSets []commitlog.MessageSet
 	msgSets = append(msgSets, newMessageSet(0, &protocol.Message{
-		Key:       []byte("travisjeffery"),
+		Key:       []byte("wx"),
 		Value:     []byte("one tj"),
 		MagicByte: 2,
 		Timestamp: time.Now(),
@@ -31,7 +31,7 @@ func TestDeleteCleaner(t *testing.T) {
 	}))
 
 	msgSets = append(msgSets, newMessageSet(2, &protocol.Message{
-		Key:       []byte("travisjeffery"),
+		Key:       []byte("wx"),
 		Value:     []byte("two tj"),
 		MagicByte: 2,
 		Timestamp: time.Now(),
@@ -81,7 +81,7 @@ func TestDeleteCleaner(t *testing.T) {
 	req.NoError(err)
 	req.Equal(1, len(ms.Messages()))
 	req.Equal(int64(2), ms.Offset())
-	req.Equal([]byte("travisjeffery"), ms.Messages()[0].Key())
+	req.Equal([]byte("wx"), ms.Messages()[0].Key())
 	req.Equal([]byte("two tj"), ms.Messages()[0].Value())
 	count++
 

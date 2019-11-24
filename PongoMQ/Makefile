@@ -1,4 +1,4 @@
-BUILD_PATH := cmd/jocko/jocko
+BUILD_PATH := cmd/pongo/pongo
 DOCKER_TAG := latest
 
 all: test
@@ -11,7 +11,7 @@ vet:
 	@go list ./... | grep -v vendor | xargs go vet
 
 build: deps
-	@go build -o $(BUILD_PATH) cmd/jocko/main.go
+	@go build -o $(BUILD_PATH) cmd/pongo/main.go
 
 release:
 	@which goreleaser 2>/dev/null || go get -u github.com/goreleaser/goreleaser
@@ -21,7 +21,7 @@ clean:
 	@rm -rf dist
 
 build-docker:
-	@docker build -t travisjeffery/jocko:$(DOCKER_TAG) .
+	@docker build -t wx/pongo:$(DOCKER_TAG) .
 
 generate:
 	@go generate

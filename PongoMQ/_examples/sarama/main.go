@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	"github.com/Shopify/sarama"
-	"github.com/travisjeffery/jocko/jocko"
-	"github.com/travisjeffery/jocko/jocko/config"
-	"github.com/travisjeffery/jocko/log"
-	"github.com/travisjeffery/jocko/protocol"
+	"wx.pongo/pongo"
+	"wx.pongo/pongo/config"
+	"wx.pongo/log"
+	"wx.pongo/protocol"
 )
 
 type check struct {
@@ -34,7 +34,7 @@ var (
 
 func init() {
 	var err error
-	logDir, err = ioutil.TempDir("/tmp", "jocko-client-test")
+	logDir, err = ioutil.TempDir("/tmp", "pongo-client-test")
 	if err != nil {
 		panic(err)
 	}
@@ -58,7 +58,7 @@ func main() {
 	pmap := make(map[int32][]check)
 
 	for i := 0; i < messageCount; i++ {
-		message := fmt.Sprintf("Hello from Jocko #%d!", i)
+		message := fmt.Sprintf("Hello from pongo #%d!", i)
 		partition, offset, err := producer.SendMessage(&sarama.ProducerMessage{
 			Topic: topic,
 			Value: sarama.StringEncoder(message),
@@ -116,8 +116,8 @@ func main() {
 	fmt.Printf("producer and consumer worked! %d messages ok\n", totalChecked)
 }
 
-func setup() (*jocko.Server, func()) {
-	c, cancel := jocko.NewTestServer(&testing.T{}, func(cfg *config.Config) {
+func setup() (*pongo.Server, func()) {
+	c, cancel := pongo.NewTestServer(&testing.T{}, func(cfg *config.Config) {
 		cfg.Bootstrap = true
 		cfg.BootstrapExpect = 1
 		cfg.StartAsLeader = true
@@ -127,7 +127,7 @@ func setup() (*jocko.Server, func()) {
 		os.Exit(1)
 	}
 
-	conn, err := jocko.Dial("tcp", c.Addr().String())
+	conn, err := pongo.Dial("tcp", c.Addr().String())
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error connecting to broker: %v\n", err)
 		os.Exit(1)

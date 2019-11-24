@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/travisjeffery/jocko/commitlog"
-	"github.com/travisjeffery/jocko/protocol"
+	"wx.pongo/commitlog"
+	"wx.pongo/protocol"
 )
 
 func TestCompactCleaner(t *testing.T) {
@@ -17,7 +17,7 @@ func TestCompactCleaner(t *testing.T) {
 
 	var msgSets []commitlog.MessageSet
 	msgSets = append(msgSets, newMessageSet(0, &protocol.Message{
-		Key:       []byte("travisjeffery"),
+		Key:       []byte("wx"),
 		Value:     []byte("one tj"),
 		MagicByte: 2,
 		Timestamp: time.Now(),
@@ -31,7 +31,7 @@ func TestCompactCleaner(t *testing.T) {
 	}))
 
 	msgSets = append(msgSets, newMessageSet(2, &protocol.Message{
-		Key:       []byte("travisjeffery"),
+		Key:       []byte("wx"),
 		Value:     []byte("two tj"),
 		MagicByte: 2,
 		Timestamp: time.Now(),
@@ -96,7 +96,7 @@ func TestCompactCleaner(t *testing.T) {
 			break
 		}
 		req.Equal(1, len(ms.Messages()))
-		req.Equal([]byte("travisjeffery"), ms.Messages()[0].Key())
+		req.Equal([]byte("wx"), ms.Messages()[0].Key())
 		req.Equal([]byte("two tj"), ms.Messages()[0].Value())
 		count++
 	}

@@ -1,20 +1,20 @@
-version: '3'
+version: "3"
 
 services:
-  jocko_a:
+  pongo_a:
     build:
       context: .
-    image: travisjeffery/jocko:latest
-    command: jocko broker --id 0 --raft-addr=jocko_a:9093 --bootstrap --bootstrap-expect=3
+    image: wx/pongo:latest
+    command: pongo broker --id 0 --raft-addr=pongo_a:9093 --bootstrap --bootstrap-expect=3
 
-  jocko_b:
+  pongo_b:
     build:
       context: .
-    image: travisjeffery/jocko:latest
-    command: jocko broker --join=jocko_a:9094 --id 1 --raft-addr=jocko_b:9093 --bootstrap-expect=3
+    image: wx/pongo:latest
+    command: pongo broker --join=pongo_a:9094 --id 1 --raft-addr=pongo_b:9093 --bootstrap-expect=3
 
-  jocko_c:
+  pongo_c:
     build:
       context: .
-    image: travisjeffery/jocko:latest
-    command: jocko broker --join=jocko_a:9094 --id 2 --raft-addr=jocko_c:9093 --bootstrap-expect=3
+    image: wx/pongo:latest
+    command: pongo broker --join=pongo_a:9094 --id 2 --raft-addr=pongo_c:9093 --bootstrap-expect=3

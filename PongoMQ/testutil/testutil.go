@@ -10,12 +10,12 @@ import (
 	"time"
 
 	dynaport "github.com/travisjeffery/go-dynaport"
-	"github.com/travisjeffery/jocko/jocko/config"
-	"github.com/travisjeffery/jocko/log"
+	"wx.pongo/pongo/config"
+	"wx.pongo/log"
 )
 
 func TestConfig(t *testing.T) (string, *config.Config) {
-	dir := tempDir(t, "jocko")
+	dir := tempDir(t, "pongo")
 	config := config.DefaultConfig()
 	ports := dynaport.Get(3)
 	config.NodeName = uniqueNodeName(t.Name())
@@ -42,7 +42,7 @@ func TestConfig(t *testing.T) (string, *config.Config) {
 	return dir, config
 }
 
-var tmpDir = "/tmp/jocko-test"
+var tmpDir = "/tmp/pongo-test"
 
 func init() {
 	if err := os.MkdirAll(tmpDir, 0755); err != nil {

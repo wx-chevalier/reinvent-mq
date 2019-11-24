@@ -54,6 +54,7 @@ github.com/hashicorp/raft-boltdb v0.0.0-20160913163600-a8adffd05b79 h1:TYxJnIsuv
 github.com/hashicorp/raft-boltdb v0.0.0-20160913163600-a8adffd05b79/go.mod h1:pNv7Wc3ycL6F5oOWn+tPGo2gWD4a5X+yp/ntwdKLjRk=
 github.com/hashicorp/serf v0.0.0-20171222050535-911b3cc29e11 h1:UUEW2PXZVcuT/eS86r6HwQD7ahc1nBKbQ5DxyI7kpwQ=
 github.com/hashicorp/serf v0.0.0-20171222050535-911b3cc29e11/go.mod h1:h/Ru6tmZazX7WO/GDmwdpS975F019L4t5ng5IgwbNrE=
+github.com/inconshreveable/mousetrap v1.0.0 h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NHg9XEKhtSvM=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/matttproud/golang_protobuf_extensions v1.0.0 h1:YNOwxxSJzSUARoD9KRZLzM9Y858MNGCOACTvCW9TSAc=
 github.com/matttproud/golang_protobuf_extensions v1.0.0/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
@@ -105,6 +106,7 @@ github.com/ugorji/go v0.0.0-20180112141927-9831f2c3ac10 h1:4zp+5ElNBLy5qmaDFrbVD
 github.com/ugorji/go v0.0.0-20180112141927-9831f2c3ac10/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJQ=
 golang.org/x/net v0.0.0-20180218175443-cbe0f9307d01 h1:po1f06KS05FvIQQA2pMuOWZAUXiy1KYdIf0ElUU2Hhc=
 golang.org/x/net v0.0.0-20180218175443-cbe0f9307d01/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
+golang.org/x/sys v0.0.0-20171006175012-ebfc5b463182 h1:7cKexPAAZFbkQtOZ/08DxRPYYxWzMBesz2/gC7esAtI=
 golang.org/x/sys v0.0.0-20171006175012-ebfc5b463182/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 upspin.io v0.0.0-20180517055408-63f1073c7a3a h1:SmRV4ptPhupMzU2o5cWgX9FmOwGLP135Z7jihhmvgtk=
 upspin.io v0.0.0-20180517055408-63f1073c7a3a/go.mod h1:4hdXTXkMPXxzbiw/sultoifpccn98hChAFvrU19V2ug=

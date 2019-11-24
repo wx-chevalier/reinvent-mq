@@ -3,7 +3,7 @@ package mock
 import (
 	"strconv"
 
-	"github.com/travisjeffery/jocko/protocol"
+	"wx.pongo/protocol"
 )
 
 // Client for testing

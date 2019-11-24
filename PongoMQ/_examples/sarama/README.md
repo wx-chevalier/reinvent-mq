@@ -1,12 +1,12 @@
-# Jocko used with a Sarama client example
+# pongo used with a Sarama client example
 
-This example shows Sarama producing and consuming with Jocko.
+This example shows Sarama producing and consuming with pongo.
 
 ## Setup
 
 ```
-$ go get github.com/travisjeffery/jocko/...
-$ cd $GOPATH/src/github.com/travisjeffery/jocko/examples/sarama
+$ go get wx.pongo/...
+$ cd $GOPATH/src/wx.pongo/examples/sarama
 ```
 
 ## Run

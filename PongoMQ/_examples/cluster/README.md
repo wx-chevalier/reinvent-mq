@@ -1,20 +1,20 @@
-# Jocko cluster example
+# pongo cluster example
 
 This will start a local three node cluster.
 
 ## Build
 
 ```bash
-$ go get github.com/travisjeffery/jocko/...
-$ cd $GOPATH/src/github.com/travisjeffery/jocko/cmd/jocko
+$ go get wx.pongo/...
+$ cd $GOPATH/src/wx.pongo/cmd/pongo
 $ go build
 ```
 
 ## Start the nodes
 
 ```bash
-$ ./jocko broker \
-          --data-dir="/tmp/jocko0" \
+$ ./pongo broker \
+          --data-dir="/tmp/pongo0" \
           --broker-addr=127.0.0.1:9001 \
           --raft-addr=127.0.0.1:9002 \
           --serf-addr=127.0.0.1:9003 \
@@ -22,8 +22,8 @@ $ ./jocko broker \
           --bootstrap-expect=3 \
           --id=1
 
-$ ./jocko broker \
-          --data-dir="/tmp/jocko1" \
+$ ./pongo broker \
+          --data-dir="/tmp/pongo1" \
           --broker-addr=127.0.0.1:9101 \
           --raft-addr=127.0.0.1:9102 \
           --serf-addr=127.0.0.1:9103 \
@@ -31,8 +31,8 @@ $ ./jocko broker \
           --bootstrap-expect=3 \
           --id=2
 
-$ ./jocko broker \
-          --data-dir="/tmp/jocko2" \
+$ ./pongo broker \
+          --data-dir="/tmp/pongo2" \
           --broker-addr=127.0.0.1:9201 \
           --raft-addr=127.0.0.1:9202 \
           --serf-addr=127.0.0.1:9203 \
