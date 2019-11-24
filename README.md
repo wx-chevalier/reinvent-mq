@@ -4,6 +4,8 @@
 
 Multiple home-made Message Queues, OMMQ(akin RocketMQ, implements Open Messaging Specification), PongoMQ(akin Kafka), CubeMQ(akin TubeMQ), etc.
 
+对于消息中间件的体系架构设计及常见中间件的使用请参考[深入浅出分布式基础架构系列](https://github.com/wx-chevalier/DistributedSystem-Series/search?q=消息中间件)。
+
 # About
 
 ## Motivation & Credits
